@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Lista Videogames</h3>
+    <h3>{{ titulo }}</h3>
     <input type="text" placeholder="Nome do Videogame" v-model="item">
     <button type="button" @click="adicionarItem">Adicionar</button>
     <br>
@@ -17,6 +17,9 @@ import RemoverItemListaMixin from '@/mixins/RemoverItemListaMixin';
 
 export default {
   name: 'ListaVideogames',
+  data: () => ({
+    titulo: 'Lista Videogames'
+  }),
   mixins: [ListaMixin, RemoverItemListaMixin]
 }
 </script>
